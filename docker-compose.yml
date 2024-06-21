@@ -1,0 +1,8 @@
+version: '3'
+services:
+  app:
+    image: daniel123123/student-registry-app-jenkins:latest
+    ports:
+      - "8081:8081" # Map port 3030 on the host to port 3030 in the container
+    environment:
+      - NODE_ENV=production
