@@ -6,5 +6,10 @@ pipeline{
                 bat 'npm install'
             }
         }
+        stage("Audit Vulnerabilities"){
+            steps{
+                bat 'npm audit fix --force'
+            }
+        }
     }
 }
