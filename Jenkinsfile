@@ -11,5 +11,10 @@ pipeline{
                 bat 'npm audit fix --force'
             }
         }
+        stage("Integration tests"){
+            steps{
+                bat 'npm run test'
+            }
+        }
     }
 }
